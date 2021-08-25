@@ -6,7 +6,8 @@
 set -e
 
 ###Mask TEs
-bedtools maskfasta -fi .fasta -bed repeats_hg19.bed -fo out_bedtools.fasta
+bedtools maskfasta -fi GCF_000001405.25_GRCh37.p13_genomic.fna -bed hg19_TEs.bed -fo out_bedtools.fasta
+bedtools getfasta -name -fi GCF_000001405.25_GRCh37.p13_genomic.fna -bed hg19_genes.bed
 
 ###Define variables (directories, softwares, array of data names)
 DIR="/mnt/7f39cef6-de77-4920-a0e8-54114cd9efd3/danidoc"
