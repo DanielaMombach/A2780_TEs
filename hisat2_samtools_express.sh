@@ -39,16 +39,16 @@ echo -e "\n*---------- CREATE INDEX"
 	"$HISAT2" -p 4 -x "$DIRREF"/"$REF""_hisat2.index" "$DIRFASTQ"/SRR14310038.fastq -S "$DIRALIGN"/A2780_rep2.sam
 
 	echo -e "\n*---------- ALIGN READS control 3 TO THE REF GENOME"
-    "$HISAT2" -p 4 -x "$DIRREF"/"$REF""_hisat2.index" "$DIRFASTQ"/SRR14310039.fastq -S "$DIRALIGN"/A2780_rep3.sam
+	"$HISAT2" -p 4 -x "$DIRREF"/"$REF""_hisat2.index" "$DIRFASTQ"/SRR14310039.fastq -S "$DIRALIGN"/A2780_rep3.sam
 
 	echo -e "\n*---------- ALIGN READS treatment 1 TO THE REF GENOME"
-    "$HISAT2" -p 4 -x "$DIRREF"/"$REF""_hisat2.index" "$DIRFASTQ"/SRR143100343.fastq -S "$DIRALIGN"/A2780t_rep1.sam
+	"$HISAT2" -p 4 -x "$DIRREF"/"$REF""_hisat2.index" "$DIRFASTQ"/SRR143100343.fastq -S "$DIRALIGN"/A2780t_rep1.sam
 
-    echo -e "\n*---------- ALIGN READS treatment 2 TO THE REF GENOME"
-    "$HISAT2" -p 4 -x "$DIRREF"/"$REF""_hisat2.index" "$DIRFASTQ"/SRR143100344.fastq -S "$DIRALIGN"/A2780t_rep2.sam
+	echo -e "\n*---------- ALIGN READS treatment 2 TO THE REF GENOME"
+	"$HISAT2" -p 4 -x "$DIRREF"/"$REF""_hisat2.index" "$DIRFASTQ"/SRR143100344.fastq -S "$DIRALIGN"/A2780t_rep2.sam
 
-    echo -e "\n*---------- ALIGN READS treatment 3 TO THE REF GENOME"
-    "$HISAT2" -p 4 -x "$DIRREF"/"$REF""_hisat2.index" "$DIRFASTQ"/SRR143100345.fastq -S "$DIRALIGN"/A2780t_rep3.sam
+	echo -e "\n*---------- ALIGN READS treatment 3 TO THE REF GENOME"
+	"$HISAT2" -p 4 -x "$DIRREF"/"$REF""_hisat2.index" "$DIRFASTQ"/SRR143100345.fastq -S "$DIRALIGN"/A2780t_rep3.sam
 
 
 ###Convert SAM files to BAM
@@ -56,32 +56,32 @@ echo -e "\n*---------- CREATE INDEX"
 	echo -e "n*-----------control 1 SAM TO BAM"
 	"$SAMTOOLS" view -bS "$DIRALIGN"/A2780_rep1.sam > "$DIRALIGN"/A2780_rep1.bam
 	echo -e "n*-----------control 1 SAM EXCLUDING"
-       rm -R "$DIRALIGN"/A2780_rep1.sam
+        rm -R "$DIRALIGN"/A2780_rep1.sam
 
 	echo -e "n*-----------control 2 SAM TO BAM"
         "$SAMTOOLS" view -bS "$DIRALIGN"/A2780_rep2.sam > "$DIRALIGN"/A2780_rep2.bam
 	echo -e "n*-----------control 2 SAM EXCLUDING"
         rm -R "$DIRALIGN"/A2780_rep2.sam
 
-    echo -e "n*-----------control 3 SAM TO BAM"
+	echo -e "n*-----------control 3 SAM TO BAM"
         "$SAMTOOLS" view -bS "$DIRALIGN"/A2780_rep3.sam > "$DIRALIGN"/A2780_rep3.bam
 	echo -e "n*-----------control 3 SAM EXCLUDING"
-       rm -R "$DIRALIGN"/A2780_rep3.sam
+	rm -R "$DIRALIGN"/A2780_rep3.sam
 
-    echo -e "n*-----------treatment 1 SAM TO BAM"
-     "$SAMTOOLS" view -bS "$DIRALIGN"/A2780t_rep1.sam > "$DIRALIGN"/A2780t_rep1.bam
-    echo -e "n*-----------treatment 1 SAM EXCLUDING"
-       rm -R "$DIRALIGN"/A2780t_rep1.sam
+	echo -e "n*-----------treatment 1 SAM TO BAM"
+	"$SAMTOOLS" view -bS "$DIRALIGN"/A2780t_rep1.sam > "$DIRALIGN"/A2780t_rep1.bam
+	echo -e "n*-----------treatment 1 SAM EXCLUDING"
+	rm -R "$DIRALIGN"/A2780t_rep1.sam
 	
-    echo -e "n*-----------treatment 2 SAM TO BAM"
-     "$SAMTOOLS" view -bS "$DIRALIGN"/A2780t_rep2.sam > "$DIRALIGN"/A2780t_rep2.bam
-    echo -e "n*-----------treatment 2 SAM EXCLUDING"
-       rm -R "$DIRALIGN"/A2780t_rep2.sam
+	echo -e "n*-----------treatment 2 SAM TO BAM"
+	"$SAMTOOLS" view -bS "$DIRALIGN"/A2780t_rep2.sam > "$DIRALIGN"/A2780t_rep2.bam
+	echo -e "n*-----------treatment 2 SAM EXCLUDING"
+	rm -R "$DIRALIGN"/A2780t_rep2.sam
 	
-    echo -e "n*-----------treatment 3 SAM TO BAM"
-     "$SAMTOOLS" view -bS "$DIRALIGN"/A2780t_rep3.sam > "$DIRALIGN"/A2780t_rep3.bam
-    echo -e "n*-----------treatment 3 SAM EXCLUDING"
-       rm -R "$DIRALIGN"/A2780t_rep3.sam
+	echo -e "n*-----------treatment 3 SAM TO BAM"
+	"$SAMTOOLS" view -bS "$DIRALIGN"/A2780t_rep3.sam > "$DIRALIGN"/A2780t_rep3.bam
+	echo -e "n*-----------treatment 3 SAM EXCLUDING"
+	rm -R "$DIRALIGN"/A2780t_rep3.sam
 	
 
 ###Count reads per gene with express
