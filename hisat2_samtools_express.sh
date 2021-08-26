@@ -27,7 +27,7 @@ REF=hg19_masked_genes.fa
 
 ###Create index of the reference genome with hisat2
 echo -e "\n*---------- CREATE INDEX"
-"$HISAT2BUILD" -p 4 -f "$DIRREF"/"$REF".fa "$DIRREF"/"$REF""_hisat2.index"
+"$HISAT2BUILD" -p 4 -f "$DIRREF"/"$REF" "$DIRREF"/"$REF""_hisat2.index"
 
 
 ###Align reads to the reference genome with hisat2
