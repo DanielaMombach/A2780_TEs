@@ -86,14 +86,14 @@ echo -e "\n*---------- CREATE INDEX"
 ###Count reads per gene with express
 
 	echo -e "\n*---------- COUNT READS PER GENE"
-	"$EXPRESS" -o "$DIRCOUNTREADS"/A2780_rep1 -O 1 --output-align-prob --calc-covar "$DIRREF"/"$REF".fasta --f-stranded "$DIRALIGN"/A2780_rep1.bam
+	"$EXPRESS" -o "$DIRCOUNTREADS"/A2780_rep1 -O 1 --output-align-prob --calc-covar "$DIRREF"/"$REF" --f-stranded "$DIRALIGN"/A2780_rep1.bam
 	
-	"$EXPRESS" -o "$DIRCOUNTREADS"/A2780_rep2 -O 1 --output-align-prob --calc-covar "$DIRREF"/"$REF".fasta --f-stranded "$DIRALIGN"/A2780_rep2.bam
+	"$EXPRESS" -o "$DIRCOUNTREADS"/A2780_rep2 -O 1 --output-align-prob --calc-covar "$DIRREF"/"$REF" --f-stranded "$DIRALIGN"/A2780_rep2.bam
 
-	"$EXPRESS" -o "$DIRCOUNTREADS"/A2780_rep3 -O 1 --output-align-prob --calc-covar "$DIRREF"/"$REF".fasta --f-stranded "$DIRALIGN"/A2780_rep3.bam
+	"$EXPRESS" -o "$DIRCOUNTREADS"/A2780_rep3 -O 1 --output-align-prob --calc-covar "$DIRREF"/"$REF" --f-stranded "$DIRALIGN"/A2780_rep3.bam
 	
-	"$EXPRESS" -o "$DIRCOUNTREADS"/A2780t_rep1 -O 1 --output-align-prob --calc-covar "$DIRREF"/"$REF".fasta --f-stranded "$DIRALIGN"/A2780t_rep1.bam
+	"$EXPRESS" -o "$DIRCOUNTREADS"/A2780t_rep1 -O 1 --output-align-prob --calc-covar "$DIRREF"/"$REF" --f-stranded "$DIRALIGN"/A2780t_rep1.bam
 
-	"$EXPRESS" -o "$DIRCOUNTREADS"/A2780t_rep2 -O 1 --output-align-prob --calc-covar "$DIRREF"/"$REF".fasta --f-stranded "$DIRALIGN"/A2780t_rep2.bam
+	"$EXPRESS" -o "$DIRCOUNTREADS"/A2780t_rep2 -O 1 --output-align-prob --calc-covar "$DIRREF"/"$REF" --f-stranded "$DIRALIGN"/A2780t_rep2.bam
 
-	"$EXPRESS" -o "$DIRCOUNTREADS"/A2780t_rep3 -O 1 --output-align-prob --calc-covar "$DIRREF"/"$REF".fasta --f-stranded "$DIRALIGN"/A2780t_rep3.bam
+	"$EXPRESS" -o "$DIRCOUNTREADS"/A2780t_rep3 -O 1 --output-align-prob --calc-covar "$DIRREF"/"$REF" --f-stranded "$DIRALIGN"/A2780t_rep3.bam
