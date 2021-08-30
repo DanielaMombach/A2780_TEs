@@ -16,7 +16,6 @@ DIRFASTQ="$DIR"
 DIRREF=/mnt/7f39cef6-de77-4920-a0e8-54114cd9efd3/danidoc
 DIRALIGN="$DIR"/align
 DIRCOUNTREADS="$DIR"/countreads
-DIRCOUNTTE="$DIR"/countte
 
 HISAT2=/usr/bin/hisat2
 HISAT2BUILD=/usr/bin/hisat2-build
