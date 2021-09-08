@@ -23,5 +23,5 @@ dataset <- DESeqDataSetFromMatrix(countData = counttable, colData = colData, des
 dataset
 dds = DESeq(dataset)
 head(dds)
-result = results(dds, contrast=c("treatment","cisplatin","control"))
+result = results(dds, contrast=c("treatment","control"))
 write.table(result, file="A2780xA2780t_deseq.csv", sep = ",")
