@@ -1,4 +1,6 @@
-res = read.csv("A2780xA2780t_deseq.csv", sep = ",", header = TRUE)
+plot(rnorm(50), rnorm(50))
+
+res = read.csv("A2780xA2780t_deseq.csv", sep = "\t", header = TRUE)
 
 # Volcano plot 2
 sig = rownames(subset(res, padj<0.05 & log2FoldChange>1))
@@ -21,7 +23,7 @@ svg(filename = "A2780xA2780t_volcano.svg", width=3, height = 3, pointsize = 5)
 
 graph = plot(res$log2FoldChange, -log10(res$padj), col=colScale,  panel.first=grid(),
              main="A2780 x A2780t", xlab="log2 fold-change", ylab="-log10 FDR",
-             pch=20, cex=2,xlim=c(-5,5),ylim=c(0,30))
+             pch=20, cex=2,xlim=c(-4,4),ylim=c(0,08))
 
 abline(v = -1, col = "black", lty = 3, lwd = 2)
 abline(v = 1, col = "black", lty = 3, lwd = 2)
