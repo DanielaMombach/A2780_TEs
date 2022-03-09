@@ -1,0 +1,12 @@
+# reference https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/
+# gene coordinates: GCF_000001405.25_GRCh37.p13_genomic.gtf.gz
+# TE coordinates: GCF_000001405.25_GRCh37.p13_rm.out.gz
+# To run Bedtools instersect we need to change the files to BED.
+## gene file to BED
+awk '$3 == "gene" ; {print $1, $4, $5, $10, $6, $7}' GCF_000001405.25_GRCh37.p13_genomic.gtf > GCF_000001405.25_GRCh37.p13_genomic.bed
+## TE file to BED
+sed -i 's/C$/-/;s/ /\t/g' GCF_000001405.25_GRCh37.p13_rm.out #prepare file (strand from C to - and space to \t)
+awk '{print  $5, $6, $7, $11, $15, $9}' GCF_000001405.25_GRCh37.p13_rm.out > GCF_000001405.25_GRCh37.p13_rm.bed
+
+# run bedtools intersect
+bedtools intersect -a genes.bed -b TEs.bed -s -f 0.2 > TEs_inside_gene.txt
